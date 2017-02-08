@@ -7,6 +7,7 @@
 //============================================================================
 
 #include <iostream>
+#include <stdio.h>
 #include "omp.h"
 using namespace std;
 
@@ -15,7 +16,7 @@ int main() {
 	#pragma omp parallel
 	{
 		int ID = omp_get_thread_num();
-		printf("hello(%d)", ID);
-		cout<<"world"<<ID<<endl;
+		printf(" hello(%d)", ID);
+		printf(" world(%d)\n", ID);
 	}
 }
