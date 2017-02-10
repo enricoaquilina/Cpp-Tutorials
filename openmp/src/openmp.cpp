@@ -34,7 +34,9 @@ int main() {
 			x=(i+0.5)*step;
 			aux = 4.0/(1.0+x*x);
 
-	#pragma omp critical
+	//you can have multple critical regions
+	//these allow just 1 thread at a time
+	#pragma omp critical nameofcriticalregion
 			sum += aux;
 			printf("\nsum is %f", sum);
 		}
